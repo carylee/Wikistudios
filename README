@@ -1,0 +1,122 @@
+WikiStudios 
+===========
+The world wide studio for film collaboration
+--------------------------------------------
+ 
+By Cary Lee, Rahul Syamlal, Oytun Yücel, and Jia Zhang 
+ 
+
+##The Problem:##
+Our motivation was to build a system that allows people anywhere in the world to create and collaborate on films. Whether they have their own idea or they just want to carry out someone else's thought, everyone can contribute in film projects however they like. Having the internet's huge audience will give more people the opportunity to express themselves, and thus result in highly creative films.
+
+ 
+To start out, we decided to use YouTube videos as the platform from where we will extract videos, which means there will be no need for our site to host videos. Therefore, our beginning goal is to create a website that will allow the creation of projects, the viewing of projects, the upload of YouTube videos into projects and the video library, a stock library of added YouTube videos that can be used in other projects, and we need to create an underlining database to support the storage and organization of projects and videos. 
+ 
+ 
+##Existing Solutions:##
+We discovered a website www.omnisio.com which features similar functions that we like to employ. Omnisio allowed users to create their own "shows" by getting videos from YouTube and arranging them into a unified "show", or what we would call a project. Unfortunately, we could not acquire their API as we had hoped (Omnisio was recently purchased by Google, so they said they have suspended their API). 
+ 
+www.jumpcut.com has similar ideas as WikiStudios. They also promote the idea of combining clips to make a movie. One difference is that they do not support adding videos from YouTube or other video hosting sites, only from their own site. They have a video editor that allows users to edit their videos, as well as remix existing clips or movies. They have disabled uploading new clips to the site because they are focusing on other Yahoo! projects. 
+ 
+www.embedr.com focuses on letting users add videos from many video hosting sites such as YouTube and Google, and combining many videos across different web hosts into a single playlist of the user's favorite videos. They do not support uploading videos on their site. 
+ 
+ 
+##Overall Approach:##
+Our initial focus was on building the back end for the system. We used a MySQL database to store projects and videos that we have in the system. PHP code was developed to handle adding projects and videos to the database from our website. The PHP code was object-oriented written to make the pages more organized and clear. Further functionality was also added such as reordering the videos in a project, displaying the YouTube videos using JW Player, playing videos one right after the other in a project with multiple videos, adding videos to the library without having to add them to a project (a video can also be added to as many projects as it needs to), importing video descriptions and tags directly from YouTube.   
+Our other focus was to work on the front end for the system. We started out trying to use Flex, but in the end used mostly CSS styling to design the website (to be elaborated in the Road Block section). We used JW Player, JavaScript, and jQuery collectively to make the web interface more user-friendly. JW Player is a customizable video player that is especially adept at reading YouTube videos. JavaScript and jQuery enabled us to re-order the videos by just drag and drop. 
+ 
+ 
+##Road Blocks Encountered:##
+In attempting to use Flex for the front end, we ran into many problems. Firstly, it took a very long time to try to learn it because no one in the group has encountered it before. To use Flex, we have to write code in the Flex developer program, and it has to be in MXML documents, which are not as simple as HTML documents. Even though Flex is supposed to be great for Flash based internet applications, it was unnecessary for our overall purpose. 
+
+No one in the group was fluent in the technologies we used, like JW Player and jQuery. They took a bit of time to learn and make the applications work. We wanted to pursue making a jQuery progress bar, in lieu of JW Player's progress bar, that can span the total duration of a project and display the play progress of each video proportionally on the project progress bar. However, that proved difficult and we have to set it as a goal for future work. 
+ 
+ 
+##Solutions:##
+Instead of Flex, we improved the look of the website using HTML and CSS. It made the integration between the back end and the front end much easier. We added the CSS styling on top of the back end PHP pages that we had previously. 
+We have a class called HTMLObject, which contains a function called htmlheader, which calls a function called addstylesheet, as well as others. To add a CSS stylesheet onto a PHP page, we use this code:
+
+$HTML = new HTMLObject;  
+$stylesheets = array("/styles/styletest.css", "/styles/shortpage.css");  
+$HTML->htmlheader($title, $stylesheets, $scripts);
+
+
+Notice that the function can take multiple CSS stylesheets for one page. 
+
+As beginners of JW Player, JavaScript, and jQuery, we had to do a lot of research to begin writing functional code. Through this project, we learned a lot about these technologies and will be more apt to handle them the next time they are needed. 
+JQuery comes with a sortable function that allows sorting of elements by dragging and dropping thumbnail pictures of videos. Through suggestion of Professor Hammond, we chose to implement our interface for changing the order of videos using jQuery. 
+We use jQuery code from dragdrop.php and the project class's sortable function to display the drag and drop area in project.php. To make it work, our final HTML output of the video list needs to look like this:
+
+<div id="sortclips">
+
+<ul id="clip-list">
+
+        <li id="clip_70"><div class='clip'>
+
+                <a href='/video.php?v=70'><img alt="Horowitz plays SchumannTraumerei in Moscow" class="thumbnail" src="http://img.youtube.com/vi/qq7ncjhSqtk/2.jpg"/></a><br />
+
+                <span class="clip-list-title">Horowitz plays SchumannTraumerei in Moscow</span></div>
+
+        </li>
+
+        <li id="clip_21"><div class='clip'>
+
+                <a href='/video.php?v=21'><img alt="Dramatic Chipmunk" class="thumbnail" src="http://img.youtube.com/vi/a1Y73sPHKxw/2.jpg"/></a><br />
+
+                <span class="clip-list-title">Dramatic Chipmunk</span></div>
+
+        </li>
+
+</ul>
+
+</div> 
+Where the list "clip-list" corresponds to the calling of jQuery's sortable function:
+
+$("#clip-list").sortable({});
+
+ 
+ 
+##Future work/plans for follow up:##
+We want to allow the system to take different types of uploads in addition to video files such as text documents, music files, picture files. 
+We would like the back to back playing of one video to the next to be seamless, as if we are actually watching a movie instead of video clips strung together. Another desirable feature is if we can add transitions in between the clips, like fade in and out. 
+One long-term goal is to make the system accept sources from other video hosting sites, such as Vimeo, DailyMotion, and Google. 
+We need to implement the functionality for users to login to their YouTube accounts and upload their own videos, which in turn is added into our video library. All this would be performed on our site without need to go to YouTube's site.
+
+With more time, we could fully implement the project progress bar. 
+If enough resources are made available, we might consider allowing uploading of videos on our own site, because YouTube only allows one video to be 10 minutes maximum. 
+In conclusion, we were not able to accomplish as much as we liked because of our lack of expertise in the programming tools. With better skill and knowledge of those tools, we have the potential to take our vision into the next step. 
+ 
+ 
+##Rebuilding Instructions:##
+Install on a machine running PHP and MySQL 
+ 
+##Zend GData:##
+WikiStudios uses the YouTube API through the Zend GData PHP Client Library.  Installation instructions for Zend GData are at http://code.google.com/apis/gdata/articles/php_client_lib.html. 
+ 
+A backup of the database is in the root folder (wikistudios.sql.gz).  Import the database into MySQL (easily done with phpmyadmin).  If desired, drop all the data from the database, but maintain the database structure. 
+ 
+Modify the following in /includes/global_definitions.php.  The bold & bigger font portions are specific to the server and should be modified. 
+ 
+// DB connection variables 
+define("DB_SERVER", "localhost");   
+define("DB_USER", "ucmnuorg_studios");    
+define("DB_PASSWORD", "NUeecs338");   
+define("DB_NAME", "ucmnuorg_wikistudios");   
+ 
+// PATH variables.  Add as necessary to abstract the paths (so they can change)   
+define ("ROOT", "/home/ucmnuorg/public_html/wikistudios/");  
+ 
+If the MySQL database is installed on a different server than the PHP, modify the line containing "localhost" in the section above. 
+ 
+Other than that, just copy the folders "classes", "htdocs", and "includes" onto the server and go. 
+ 
+ 
+##Running Instructions:##
+Once everything is installed as above, just navigate to /htdocs/index.php and go! 
+ 
+ 
+##Breakdown of Work:##
+PHP & MySQL - Cary Lee    
+JQuery & JavaScript - Rahul Syamlal  
+CSS & Graphic Design - Oytun Yücel  
+A little bit of everything, knowledge and support in every part of the system - Jia Zhang   
