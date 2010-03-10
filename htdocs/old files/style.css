@@ -1,0 +1,32 @@
+#youtube {
+	width:470px;
+	margin-right:20px;
+	float:right;
+}
+
+#navbar li {
+	display:inline;
+	margin: 10px;
+}
+
+#navbar li a {
+	text-decoration:none;
+}
+
+table {
+	border-width:0px;
+	border-spacing:0px;
+	text-align:center;
+}
+
+td {
+	padding:3px 10px;
+}
+
+tr#odd {
+	background-color:#E1E7FF;
+}
+
+tr#even {
+	background-color:white;
+}

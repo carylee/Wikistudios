@@ -1,0 +1,21 @@
+.tag_cloud { 
+	padding: 3px; 
+	text-decoration: none; 
+}
+
+.tag_cloud:link  { color: #D1CCCD; }
+.tag_cloud:visited { color: #4077AB; }
+.tag_cloud:hover { 
+	color: #4077AB; 
+	background: #C8C0C2; 
+}
+.tag_cloud:active { 
+	color: #ffffff;
+	background: #C8C0C2; 
+}
+
+#tagcloud {
+	width:800px;
+	margin-left:auto;
+	margin-right:auto;
+}	

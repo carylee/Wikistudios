@@ -1,0 +1,169 @@
+<html>
+<head>
+<title>JW player testing</title>
+<style type="text/css">
+  #wrapper { position:absolute; left:50px; top:50px; width:320px; height:240px; background-color:#FFFFFF; }
+  #run { position:absolute; top:400px; left:150px; }
+  #reset { position:absolute; top:400px; left:250px; }
+  #tim { position:absolute; top:200px; left:500px; }
+  #stat { position:absolute; top:240px; left:500px; }
+  #aaa { position:absolute; top:300px; left:500px; }
+  /* progress bar container */
+  /*#progressbar{ border:1px solid black; width:200px; height:50px; top:350px; left:64px; position:relative; color:black; }*/
+  /* color bar */
+  /*#progressbar div.progress{ position:absolute; width:0; height:100%; overflow:hidden; background-color:#369; }*/
+  /* text on bar */
+  /*#progressbar div.progress .text{ position:absolute; text-align:center; color:white; }*/
+  /* text off bar */
+  /*#progressbar div.text{ position:absolute; width:100%; height:100%; text-align:center; }*/
+  #pbar { position:absolute; width:500px; top:500px; }
+</style>
+<link type="text/css" href="scripts/jquery-ui-1.7.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="scripts/swfobject2_1.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.7.custom.min.js"></script>
+<!-- <script type="text/javascript" src="scripts/jqueryprogressbar.js"></script> -->
+<!--  <script type="text/javascript" src="js/prototype/prototype.js"></script> -->
+<!--  <script type="text/javascript" src="js/bramus/jsProgressBarHandler.js"></script> -->
+
+<script type="text/javascript">
+var currentPosition = 0;
+var player = null;
+
+function playerReady(thePlayer) {
+	player = document.getElementById(thePlayer.id);
+	addListeners();
+}
+
+function addListeners() {
+	if (player) { 
+		player.addModelListener("STATE", "stateListener");
+		player.addModelListener("TIME", "positionListener");
+	} else {
+		setTimeout("addListeners()",100);
+	}
+}
+
+function positionListener(obj) { 
+	currentPosition = obj.position; 
+	var tmp = document.getElementById("tim");
+	if (tmp) { tmp.innerHTML = "position: " + currentPosition; }
+}
+
+function stateListener(obj) { //IDLE, BUFFERING, PLAYING, PAUSED, COMPLETED
+	currentState = obj.newstate; 
+	previousState = obj.oldstate; 
+
+	var tmp = document.getElementById("stat");
+	if (tmp) { 
+		tmp.innerHTML = "current state: " + currentState + 
+		"<br>previous state: " + previousState; 
+	}
+}
+
+
+function createPlayer() {
+	var flashvars = {
+			file:"http://www.youtube.com/watch?v=QmM_13RAy34", 
+			autostart:"true", 
+	}
+	var params = {
+			allowfullscreen:"true", 
+			allowscriptaccess:"always"
+	}
+	var attributes = {
+			id:"player",  
+			name:"player"
+	}
+	swfobject.embedSWF("player.swf", "placeholder1", "350", "300", "9.0.115", false, flashvars, params, attributes);
+}
+
+
+jQuery(document).ready(function() {
+	// Document ready...
+	
+	// Progressbar
+	$("#progressbar").progressbar({
+	value: 50
+	});
+
+	
+});
+
+
+/*
+Event.observe(window, 'load', function() {
+	firstManualPB = new JS_BRAMUS.jsProgressBar($('progressbar'), 0, {});
+}, false);
+
+
+var handler = 0;
+if(currentPosition > 0 && currenPosition <= 100) {
+	handler = setInterval ( "update()", 1000 );
+}
+else {
+	clearInterval(handler);
+}
+
+function update ( )
+{
+	firstManualPB.setPercentage('+1');
+	return false;
+}
+*/
+
+
+</script>
+</head>
+<body onLoad="createPlayer()">
+<!-- embedded player
+<div id="wrapper">
+    <object id="player"
+            classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+            codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9.0.115"                    
+            width="320" height="240">
+        <param name=bgcolor value="#FFFFFF">
+        <param name=movie value="player.swf">
+        <param name=allowfullscreen value="true">
+        <param name=allowscriptaccess value="always">
+        <param name="flashvars" value="file=video.flv&fullscreen=true&controlbar=bottom">
+
+        <embed name="player" 
+            type="application/x-shockwave-flash" 
+            pluginspage="http://www.macromedia.com/go/getflashplayer" 
+            width="320" height="240" 
+            bgcolor="#FFFFFF" 
+            src="player.swf"
+            allowfullscreen="true"
+            allowscriptaccess="always"
+            flashvars="file=video.flv&fullscreen=true&controlbar=bottom">
+        </embed>
+    </object>
+</div>
+-->
+<div id="wrapper">
+    <div id="placeholder1">
+    </div>
+</div>
+
+<br>
+<div id="run">
+<a href="#" onClick="player.sendEvent('PLAY')"><img border="0" src="images/play.jpg"></a>
+</div>
+<div id="reset">
+<a href="#" onClick="player.sendEvent('STOP')"><img border="0" src="images/stop.jpg"></a>
+</div>
+<br>
+
+<div id="tim">tim</div>
+<div id="stat">stat</div>
+<div id="aaa">aaa</div>
+
+
+<div id="pbar">
+	<div id="progressbar"></div>
+</div>
+
+</body>
+</html>
+

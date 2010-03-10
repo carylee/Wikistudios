@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+    <title />
+    <trackList>
+        <track>
+            <title>The Office</title>
+            <annotation>A clip from the office</annotation>
+            <location>http://www.youtube.com/watch?v=excBsIv_3xI</location>
+        </track>
+        <track>
+            <title>Maths</title>
+            <annotation>The largest number is 45 billion- though mathematicians suspect there may be even larger numbers.</annotation>
+            <location>http://www.youtube.com/watch?v=drE5cHe6c3s</location>
+        </track>
+    </trackList>
+</playlist>

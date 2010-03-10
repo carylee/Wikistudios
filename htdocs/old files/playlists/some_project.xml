@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+    <title>Some Project</title>
+    <trackList>
+        <track>
+            <title>Naughty Girl</title>
+            <annotation>She\&apos;s a naughty girl with a bad habit for drugs.</annotation>
+            <location>http://www.youtube.com/watch?v=GrXvF5JlmRM</location>
+        </track>
+        <track>
+            <title>Dramatic Chipmunk</title>
+            <annotation>The best 5 second clip on the internet. </annotation>
+            <location>http://www.youtube.com/watch?v=a1Y73sPHKxw</location>
+        </track>
+        <track>
+            <title>Jonah Takalua</title>
+            <annotation>puck you sir, i said puck you, with a P dont you no how to spell or sumshit? </annotation>
+            <location>http://www.youtube.com/watch?v=waB5eqY7M3o</location>
+        </track>
+        <track>
+            <title>Summer Heights High - Crumpet</title>
+            <annotation>Mr G Has An Imaginary Friend Called Crumpet!! </annotation>
+            <location>http://www.youtube.com/watch?v=t94irm-clEw</location>
+        </track>
+        <track>
+            <title>Slap the Butcher</title>
+            <annotation>Mr G and his class play slap the butcher!! </annotation>
+            <location>http://www.youtube.com/watch?v=uXjkUO88rcA</location>
+        </track>
+        <track>
+            <title>Powerthirst</title>
+            <annotation>	 Energy drink for people that need gratuitous amounts of energy! SPORTS you\&apos;ll be good at them!! RARRRRRRR!! With all new flavors like SHOCKLATE!! Chocolate energy!! Its like adding chocolate to an ELECTRICAL STORM!! If you like Strawberry...How about RAWBERRY!!! Made with lightning!! REAL LIGHTNING!!!!!! You\&apos;ll have energy running all the time!! Power lifting, power sleeping, power dating, power spawning babies!!! You will have soo many babies! 400 babies!!!! Then you feed Shocklate to your babies and they\&apos;ll become good at SPORTS!! And they\&apos;ll run ABNORMALLY FAST! They\&apos;ll compete against Kenyans, they\&apos;ll run as fast as Kenyans, they\&apos;ll run past people that think they\&apos;re Kenyans, then there\&apos;ll be a tie and they\&apos;ll be deported back to KENYA!!! You\&apos;ll be moving soo fast mother nature will be like SlOw DoWn! And you\&apos;ll be like FUCK YOU and kick her in the face with your ENERGY LEGS!!! Be smart don\&apos;t gamble on your energy. SNAKE EYES!!! </annotation>
+            <location>http://www.youtube.com/watch?v=qRuNxHqwazs</location>
+        </track>
+        <track>
+            <title>Excitement Quivers</title>
+            <annotation>Mr. G explains how he gets excitement quivers</annotation>
+            <location>http://www.youtube.com/watch?v=nJv567qx2g4</location>
+        </track>
+    </trackList>
+</playlist>

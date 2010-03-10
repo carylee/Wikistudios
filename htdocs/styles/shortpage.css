@@ -1,0 +1,21 @@
+.footer {
+	height:142px;
+	position:absolute;
+	bottom:0px;
+	width:100%;
+}
+
+#footerMain {
+	position:relative;
+	bottom:0px;
+	height:142px;
+	width:100%;
+}
+
+.push {
+	height:0px;
+}
+
+.wrapper {
+	margin:0px;
+}

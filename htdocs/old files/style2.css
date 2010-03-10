@@ -1,0 +1,55 @@
+#navbar{
+
+	width:200px; margin:0 0 0 0; height:90px;
+
+	}
+
+#navbar ul{
+
+	width:900px; margin:0 0 0 -50px; display:block; height:21px;
+
+	}
+
+#navbar ul li{
+
+	display:block; float:left; height:21px; margin:0; padding:0;
+
+	}
+
+#navbar ul li a{
+
+	font: bold 12px/21px "Trebuchet MS", Arial, Helvetica, sans-serif; padding:0 14px 0 14px; color:#EAEAEA;
+
+	background-color:#242424; text-decoration:none; margin:0; height:21px;
+
+	}
+
+#navbar ul li a:hover{
+
+	color:#EAEAEA; background-color:#0867C3;
+
+	}
+
+body{
+
+	width:1200px; /*margin:24px auto 0 auto*/0 auto;
+
+	color:#808080;
+
+	background-color:#171717;
+	}
+
+#youtube {
+	width:470px;
+
+	margin-right:20px;
+
+	float:right;
+	}
+	
+
+#mainBody h1 {
+	text-align:center;
+	font-size:48pt;
+	line-height:120%;
+}

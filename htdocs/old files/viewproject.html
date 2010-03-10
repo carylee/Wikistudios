@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<meta name="generator" content="HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org">
+
+<link rel="stylesheet" type="text/css" media="screen" href="wikistudios.css" />
+<script src="scripts/jquery-1.3.1.js" type="text/javascript"></script>
+<script src="scripts/jquery-ui-personalized-1.6rc6.js" type="text/javascript"></script>
+<script type="text/javascript" src="swfobject.js"></script>
+<script type="text/javascript">
+
+var player = null;
+// JW Player calls this  function once the player is ready
+function playerReady(thePlayer) { 
+    player = window.document[thePlayer.id]; 
+    var tmp = document.getElementById("debug-info");
+    if (tmp) { tmp.innerHTML = "About to play file!"; }
+ }
+
+function createPlayer() {
+        var flashvars = {
+                file: "video.flv",
+                autostart:"true"
+        }
+        var params = {
+                allowfullscreen:"true", 
+                allowscriptaccess:"always"
+        }
+        var attributes = {
+                id:"player1",  
+                name:"player1"
+        }
+		var swfobject;
+        swfobject.embedSWF("player.swf", "placeholder", "790", "368", "9.0.115", false, flashvars, params, attributes);
+}
+
+
+//////////////
+
+/*
+/// jQuery Code /////////
+jQuery(document).ready(function() {
+	// Document ready...
+	
+
+	
+    $("#clip-list").sortable({
+      handle: '.thumbnail',
+      update : function () {
+		    var order = $('#clip-list').sortable('serialize');
+		    var tmp = document.getElementById("debug-info");
+		    if (tmp) { tmp.innerHTML = order; }
+		    //$.load("video-sort.php?"+order);
+        }
+     });
+	
+});
+*/
+</script>
+
+
+<title> Wikistudios View Project Test</title>
+</head>
+
+<body onLoad="createPlayer()">
+
+<a href="http://www.jeroenwijering.com/?item=JW_FLV_Media_Player">JW FLV Media Player</a><br>
+External javascript control.<br>
+<br>
+
+<div id="placeholder">
+	<a href="http://www.adobe.com/go/getflashplayer">Get flash</a> to see this player	
+</div>
+<br>
+
+<a href="#" onclick="player.sendEvent('PLAY')">play/pause toggle</a>
+<br>
+
+<a href="#" onclick="player.sendEvent('STOP')">stop playing and buffering</a>
+<br>
+
+<a href="#" onclick="player.sendEvent('SEEK', 10)">seek absolute position (10th. second)</a>
+
+<br>
+
+<a href="#" onclick="player.sendEvent('VOLUME', 50)">set absolute volume 50%</a>
+<br>
+
+
+<div id="progressbar">Progress bar goes here</div>
+
+
+<h3>Sortable Clip List Test</h3>
+<!-- This is where the clip list begins. The img sources and title need to be inserted by the PHP -->
+<!--
+<br>
+<div>
+<ul id="clip-list" "ui-sortable">
+  <li id="clip_1">
+    <img height="80" border="0" width="145" alt="Powerthirst" class="thumbnail" src="http://img.youtube.com/vi/qRuNxHqwazs/0.jpg"/>
+    <span class="clip-list-title">Powerthirst</span>
+  </li>
+  <li id="clip_2">
+    <img height="80" border="0" width="145" alt="The Office" class="thumbnail" src="http://img.youtube.com/vi/excBsIv_3xI/0.jpg"/>
+    <span class="clip-list-title">The Office</span>
+  </li>
+  <li id="clip_3">
+    <img height="80" border="0" width="145" alt="Some office video" class="thumbnail" src="http://img.youtube.com/vi/sA1qEckOkP8/0.jpg"/>
+    <span class="clip-list-title">Some office video</span>
+  </li>
+  <li id="clip_4">
+    <img height="80" border="0" width="145" alt="Summer Heights High - Crumpet" class="thumbnail" src="http://img.youtube.com/vi/qRuNxHqwazs/0.jpg"/>
+    <span class="clip-list-title">Summer Heights High - Crumpet</span>
+  </li>
+
+</ul>
+</div>
+-->
+<!-- End of clip list -->
+<!--
+<p>
+Debug Info:
+</p>
+<div id="debug-info"></div>
+-->
+
+
+</body>
+
+
+</html>

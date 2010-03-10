@@ -1,0 +1,10 @@
+[02-Mar-2009 13:52:34] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/ucmnuorg/public_html/wikistudios/htdocs/test/comment.php on line 22
+[02-Mar-2009 13:53:04] PHP Fatal error:  Class 'CommentBuilder' not found in /home/ucmnuorg/public_html/wikistudios/htdocs/test/comment.php on line 11
+[02-Mar-2009 16:06:05] PHP Fatal error:  Call to private method Video::set_order_in_project() from context 'Project' in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 130
+[02-Mar-2009 16:07:53] PHP Fatal error:  Call to private method Video::set_order_in_project() from context 'Project' in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 130
+[02-Mar-2009 20:56:13] PHP Fatal error:  Class 'Project' not found in /home/ucmnuorg/public_html/wikistudios/htdocs/test/dragdrop.php on line 2
+[02-Mar-2009 21:01:19] PHP Parse error:  syntax error, unexpected T_ECHO in /home/ucmnuorg/public_html/wikistudios/htdocs/test/viewproject.php on line 37
+[02-Mar-2009 21:01:22] PHP Parse error:  syntax error, unexpected T_ECHO in /home/ucmnuorg/public_html/wikistudios/htdocs/test/viewproject.php on line 37
+[02-Mar-2009 23:28:18] PHP Fatal error:  Class 'CommentBuilder' not found in /home/ucmnuorg/public_html/wikistudios/htdocs/test/comment.php on line 12
+[02-Mar-2009 23:36:07] PHP Fatal error:  Class 'CommentBuilder' not found in /home/ucmnuorg/public_html/wikistudios/htdocs/test/comment.php on line 12
+[08-Mar-2009 23:11:53] PHP Parse error:  syntax error, unexpected T_BOOLEAN_AND in /home/ucmnuorg/public_html/wikistudios/htdocs/test/comment.php on line 14

@@ -1,0 +1,25 @@
+[15-Mar-2009 12:41:55] PHP Fatal error:  Class 'Project' not found in /home/ucmnuorg/public_html/wikistudios/htdocs/scripts/dragdrop.php on line 3
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'ucmnuorg'@'localhost' (using password: NO) in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 35
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 35
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 36
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'ucmnuorg'@'localhost' (using password: NO) in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 43
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 43
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 44
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'ucmnuorg'@'localhost' (using password: NO) in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 63
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 63
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 66
+[15-Mar-2009 12:42:58] PHP Warning:  Invalid argument supplied for foreach() in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 241
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'ucmnuorg'@'localhost' (using password: NO) in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 35
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 35
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 36
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'ucmnuorg'@'localhost' (using password: NO) in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 43
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 43
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 44
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: Access denied for user 'ucmnuorg'@'localhost' (using password: NO) in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 63
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_query() [<a href='function.mysql-query'>function.mysql-query</a>]: A link to the server could not be established in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 63
+[15-Mar-2009 12:42:58] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 66
+[15-Mar-2009 12:42:58] PHP Warning:  Invalid argument supplied for foreach() in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 241
+[15-Mar-2009 13:00:45] PHP Parse error:  syntax error, unexpected T_AS in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 240
+[15-Mar-2009 13:01:14] PHP Fatal error:  Call to undefined function  get_durations_array() in /home/ucmnuorg/public_html/wikistudios/classes/project.php on line 248
+[18-Mar-2009 23:35:58] PHP Fatal error:  Class 'Project' not found in /home/ucmnuorg/public_html/wikistudios/htdocs/scripts/dragdrop.php on line 3
+[18-Mar-2009 23:36:29] PHP Fatal error:  Call to undefined method Project::get_durations() in /home/ucmnuorg/public_html/wikistudios/htdocs/scripts/dragdrop.php on line 6

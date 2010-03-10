@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 6 November 2007), see www.w3.org">
+
+<link rel="stylesheet" type="text/css" media="screen" href="theme/ui.all.css" />
+<script src="jquery.js" type="text/javascript"></script>
+<script src="jquery-ui-personalized-1.6rc6.js" type="text/javascript"></script>
+<script src="project.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/prototype/prototype.js"></script>
+<script type="text/javascript" src="js/bramus/jsProgressBarHandler.js"></script>
+
+<script src="jqueryprogressbar.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+/*
+jQuery(document).ready(function() {
+	// Document ready...
+	
+	// Progressbar
+	$("#progressbar").progressbar({
+		value: 20 
+	});
+	
+	//$("#progressbar").reportprogress(0);
+
+});*/
+
+
+Event.observe(window, 'load', function() {
+	firstManualPB = new JS_BRAMUS.jsProgressBar($('hereComesMyFirstProgressBar'), 50, {animate: false, width: 240, height: 24});
+	secondManualPB = new JS_BRAMUS.jsProgressBar($('hereComesMySecondProgressBar'), 10, {animate: true, showText: false});
+}, false);
+
+
+</script>
+
+
+
+<title> Wikistudios View Project Test</title>
+</head>
+
+
+<body>
+Welcome to my World!
+
+
+
+<div class="demo">
+
+<ul id="sortable">
+	<li class="ui-state-default">1</li>
+	<li class="ui-state-default">2</li>
+	<li class="ui-state-default">3</li>
+	<li class="ui-state-default">4</li>
+	<li class="ui-state-default">5</li>
+	<li class="ui-state-default">6</li>
+	<li class="ui-state-default">7</li>
+	<li class="ui-state-default">8</li>
+	<li class="ui-state-default">9</li>
+	<li class="ui-state-default">10</li>
+	<li class="ui-state-default">11</li>
+	<li class="ui-state-default">12</li>
+</ul>
+
+</div><!-- End demo -->
+
+<br>
+
+<div class="percentImage1" id="hereComesMyFirstProgressBar">[ Loading Progress Bar ]</div>
+
+
+<div id="run">
+<input type="button" value="Start/Stop">
+</div>
+
+<div id="reset">
+<input type="button" value="Reset">
+</div>
+
+</body>
+
+
+</html>

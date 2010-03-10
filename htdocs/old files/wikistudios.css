@@ -1,0 +1,84 @@
+/**********************************
+
+WikiStudios 
+Styles
+
+***********************************/
+
+/* Player and Player container
+------------------------------*/
+
+#video-player-container {
+    width:790px; 
+    height:368px; 
+    background-color:red;
+}
+
+/* Player Controls
+------------------------------*/
+#clip-list { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+#clip-list li {
+    display: inline; 
+    float: left; 
+    height:auto !important;
+    min-height:208px;
+    padding-right:30px;
+    width:180px;
+    text-align: center; 
+}
+
+.thumbnail {
+    border:1px solid #EEEEEE;
+    height:80px;
+    padding:0;
+    width:145px;
+}
+
+/* Work on this to ensure that the clip title
+   remains below the clip image
+.clip-list-title {    
+    color:#444444;
+    font-size:12px;
+    font-weight:normal;
+    outline-color:-moz-use-text-color;
+    outline-style:none;
+    outline-width:medium;
+}
+*/
+
+/* Progressbar
+----------------------------------*/
+/* progress bar container */
+#progressbar{
+        border:1px solid black;
+        width:200px;
+        height:20px;
+        position:relative;
+        color:black; 
+}
+/* color bar */
+#progressbar div.progress{
+        position:absolute;
+        width:0;
+        height:100%;
+        overflow:hidden;
+        background-color:#369;
+}
+/* text on bar */
+#progressbar div.progress .text{
+        position:absolute;
+        text-align:center;
+        color:white;
+}
+/* text off bar */
+#progressbar div.text{
+        position:absolute;
+        width:100%;
+        height:100%;
+        text-align:center;
+}

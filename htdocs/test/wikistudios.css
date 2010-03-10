@@ -1,0 +1,89 @@
+/**********************************
+
+WikiStudios 
+Styles
+
+***********************************/
+
+
+/* Add in a CSS Reset sometime */
+
+/* Header
+------------------------------*/
+
+#header {
+	width:900px;
+	margin: auto;
+	text-align: center;
+}
+
+#navbar li {
+	display: inline;
+	padding: 10px;
+	/*background-color:green;*/
+}
+
+#navbar li:hover {
+	background-color:#D1D8D9;
+}
+
+#navbar li a {
+	text-decoration:none;
+	color:#4C5790;
+}
+
+#navbar li:hover a {
+	color:#1C185A;
+}
+
+/* Player and Player container
+------------------------------*/
+
+#video-player-container {
+    width:790px; 
+    height:368px; 
+    background-color:black;
+	margin: auto;
+}
+
+/* Player Controls
+------------------------------*/
+#clip-list { 
+    list-style-type: none; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    padding: 3px; 
+	width: 960px;
+	max-height: 155px;
+	overflow: auto;
+	display: table-row-group;
+}
+
+#clip-list li {
+    display: table-cell; 
+    float: left;
+    height:auto !important;
+    min-height:150px;
+   /* padding:20px 0px; */
+    width:160px;
+    text-align: center; 
+}
+
+.thumbnail {
+    border:1px solid #555555;
+    height:97px;
+    padding:0;
+    width:130px;
+}
+
+/* Work on this to ensure that the clip title
+   remains below the clip image
+.clip-list-title {    
+    color:#444444;
+    font-size:12px;
+    font-weight:normal;
+    outline-color:-moz-use-text-color;
+    outline-style:none;
+    outline-width:medium;
+}
+*/
