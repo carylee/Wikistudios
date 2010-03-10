@@ -47,32 +47,32 @@ As beginners of JW Player, JavaScript, and jQuery, we had to do a lot of researc
 JQuery comes with a sortable function that allows sorting of elements by dragging and dropping thumbnail pictures of videos. Through suggestion of Professor Hammond, we chose to implement our interface for changing the order of videos using jQuery. 
 We use jQuery code from dragdrop.php and the project class's sortable function to display the drag and drop area in project.php. To make it work, our final HTML output of the video list needs to look like this:
 
-<div id="sortclips">
+    <div id="sortclips">
 
-<ul id="clip-list">
+    <ul id="clip-list">
 
-        <li id="clip_70"><div class='clip'>
+            <li id="clip_70"><div class='clip'>
 
-                <a href='/video.php?v=70'><img alt="Horowitz plays SchumannTraumerei in Moscow" class="thumbnail" src="http://img.youtube.com/vi/qq7ncjhSqtk/2.jpg"/></a><br />
+                    <a href='/video.php?v=70'><img alt="Horowitz plays SchumannTraumerei in Moscow" class="thumbnail" src="http://img.youtube.com/vi/qq7ncjhSqtk/2.jpg"/></a><br />
 
-                <span class="clip-list-title">Horowitz plays SchumannTraumerei in Moscow</span></div>
+                    <span class="clip-list-title">Horowitz plays SchumannTraumerei in Moscow</span></div>
 
-        </li>
+            </li>
 
-        <li id="clip_21"><div class='clip'>
+            <li id="clip_21"><div class='clip'>
 
-                <a href='/video.php?v=21'><img alt="Dramatic Chipmunk" class="thumbnail" src="http://img.youtube.com/vi/a1Y73sPHKxw/2.jpg"/></a><br />
+                    <a href='/video.php?v=21'><img alt="Dramatic Chipmunk" class="thumbnail" src="http://img.youtube.com/vi/a1Y73sPHKxw/2.jpg"/></a><br />
 
-                <span class="clip-list-title">Dramatic Chipmunk</span></div>
+                    <span class="clip-list-title">Dramatic Chipmunk</span></div>
 
-        </li>
+            </li>
 
-</ul>
+    </ul>
 
-</div> 
+    </div> 
 Where the list "clip-list" corresponds to the calling of jQuery's sortable function:
 
-$("#clip-list").sortable({});
+    $("#clip-list").sortable({});
 
  
  
@@ -98,13 +98,13 @@ A backup of the database is in the root folder (wikistudios.sql.gz).  Import the
 Modify the following in /includes/global_definitions.php.  The bold & bigger font portions are specific to the server and should be modified. 
  
 // DB connection variables 
-define("DB_SERVER", "localhost");   
-define("DB_USER", "ucmnuorg_studios");    
-define("DB_PASSWORD", "NUeecs338");   
-define("DB_NAME", "ucmnuorg_wikistudios");   
+    define("DB_SERVER", "localhost");   
+    define("DB_USER", "ucmnuorg_studios");    
+    define("DB_PASSWORD", "NUeecs338");   
+    define("DB_NAME", "ucmnuorg_wikistudios");   
  
 // PATH variables.  Add as necessary to abstract the paths (so they can change)   
-define ("ROOT", "/home/ucmnuorg/public_html/wikistudios/");  
+    define ("ROOT", "/home/ucmnuorg/public_html/wikistudios/");  
  
 If the MySQL database is installed on a different server than the PHP, modify the line containing "localhost" in the section above. 
  
