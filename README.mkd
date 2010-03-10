@@ -1,3 +1,7 @@
 Wikistudios
 ===========
 This was my group's project for EECS 338 - Practicum in Intelligent Information Systems with Kris Hammond and Larry Birnbaum in the spring of 2009.
+
+The idea was to create a web application where people could collaborate on video projects.  Essentially what the implementation boiled down to was a glorified youtube playlist.
+
+I did the bulk of the PHP development for it.  This was my first PHP web application, and probably one of the last I will do without any framework.
