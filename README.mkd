@@ -1,0 +1,3 @@
+Wikistudios
+===========
+This was my group's project for EECS 338 - Practicum in Intelligent Information Systems with Kris Hammond and Larry Birnbaum in the spring of 2009.
